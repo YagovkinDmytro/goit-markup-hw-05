@@ -677,22 +677,67 @@ img {
 
 /* Modal window styles */
 .modal-form {
+  max-width: 360px;
 }
 .modal-text {
-  color: var(--main-cl-link);
+  color: #2e2f42;
   font-weight: 500;
+  margin-top: 48px;
+  margin-bottom: 16px;
+  text-align: center;
 }
-.modal-fporm-label {
+.modal-form-label {
+  display: block;
+  color: #8e8f99;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.03em;
+  margin-bottom: 4px;
 }
 .modal-form-field {
+  position: relative;
+  margin-bottom: 8px;
 }
 .modal-form-input {
+  width: 100%;
+  height: 58px;
+  border-radius: 4px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
 }
 .modal-form-icon {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%) translateX(16px);
+  fill: #2e2f42;
 }
 .modal-form-comment {
+  display: block;
+  width: 100%;
+  height: 120px;
+  padding-top: 8px;
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  resize: none;
+  margin-bottom: 16px;
 }
+.modal-form-comment::placeholder {
+  color: rgba(46, 47, 66, 0.4);
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.03em;
+}
+
 .modal-form-agreement {
+  margin-bottom: 24px;
+}
+
+.modal-form-agreement-label {
+  color: #8e8f99;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.03em;
 }
 .modal-form-agreement-link {
 }
