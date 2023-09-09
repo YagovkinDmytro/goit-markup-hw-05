@@ -743,8 +743,8 @@ img {
   display: block;
   color: #8e8f99;
   font-size: 12px;
-  line-height: 1.16;
-  letter-spacing: 0.03em;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
   margin-bottom: 4px;
 }
 .modal-form-thumb {
@@ -757,6 +757,7 @@ img {
   border-radius: 4px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   outline: transparent;
+  background-color: transparent;
   transition: border-color var(--trns-style);
 }
 .modal-form-input:focus {
@@ -765,12 +766,12 @@ img {
 .modal-form-icon {
   position: absolute;
   top: 50%;
-  left: 0;
-  transform: translateY(-50%) translateX(16px);
+  left: 16px;
+  transform: translateY(-50%);
   fill: #2e2f42;
-  transition: border-color var(--trns-style), fill var(--trns-style);
+  transition: fill var(--trns-style);
 }
-.modal-form-icon:focus {
+.modal-form-input:focus + .modal-form-icon {
   fill: #4d5ae5;
 }
 .modal-form-field-comment {
@@ -782,10 +783,15 @@ img {
   height: 120px;
   padding-top: 8px;
   padding: 8px 16px;
+  color: rgba(46, 47, 66, 0.4);
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
   border-radius: 4px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   resize: none;
   outline: transparent;
+  background-color: transparent;
   transition: border-color var(--trns-style);
 }
 .modal-form-comment:focus {
@@ -801,10 +807,11 @@ img {
   margin-bottom: 24px;
 }
 .modal-form-agreement-label {
+  display: block;
   color: #8e8f99;
   font-size: 12px;
-  line-height: 1.16;
-  letter-spacing: 0.03em;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
   user-select: none;
 }
 
@@ -813,12 +820,14 @@ img {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  width: 20px;
-  height: 20px;
+  width: 16px;
+  height: 16px;
   margin-right: 8px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 2px;
-  transition: background-color var(--trns-style), border-color var(--trns-style);
+  fill: transparent;
+  transition: background-color var(--trns-style), border var(--trns-style),
+    fill var(--trns-style);
   cursor: pointer;
 }
 
@@ -827,7 +836,8 @@ input[type="checkbox"]:checked
   + .modal-form-agreement-label
   > .modal-form-ckeckbox {
   background-color: #404bbf;
-  border-color: transparent;
+  border: none;
+  fill: #f4f4fd;
 }
 
 /*Focus state*/
